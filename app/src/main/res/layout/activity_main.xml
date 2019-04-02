@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:elevation="@dimen/len_4"
+        android:background="@drawable/toolbarbg"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="30dp">
+
+            <EditText
+                android:id="@+id/input_word"
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:background="@drawable/edit_back"
+                android:gravity="center"
+                android:hint="翻译中文/英文"
+                android:maxLength="15"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/trans_word"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/len_10"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/pleaseInput"
+                android:textColor="@color/cell_text_chinese"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <com.zyf.italker.common.widget.recycler.BounceRecyclerView
+            android:id="@+id/list_word_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:clipToPadding="false"
+            android:background="@color/colorBack"
+            android:paddingTop="@dimen/len_10"
+            android:paddingBottom="@dimen/len_10"
+            android:layout_marginBottom="50dp"
+            tools:ignore="MissingConstraints"/>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/nav"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            android:elevation="@dimen/len_10"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="UnusedAttribute"
+            tools:layout_editor_absoluteX="16dp">
+
+
+            <ImageView
+                android:id="@+id/nav_last"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="0"
+                android:foreground="@drawable/ic_touch_menu"
+                android:padding="@dimen/len_4"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_last"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/nav_play"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+
+            <ImageView
+                android:id="@+id/nav_play"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="0"
+                android:foreground="@drawable/ic_touch_menu"
+                android:padding="@dimen/len_4"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_play"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/nav_next"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="0"
+                android:foreground="@drawable/ic_touch_menu"
+                android:padding="@dimen/len_4"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/nav_play"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/nav_function"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="0"
+                android:foreground="@drawable/ic_touch_menu"
+                android:padding="@dimen/len_4"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_function"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="TODO" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/btn_del"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            android:clickable="true"
+            android:elevation="@dimen/len_10"
+            android:foreground="@drawable/ic_touch_delete"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:padding="@dimen/len_4"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_delete"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>>
+
+</LinearLayout>

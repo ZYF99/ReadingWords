@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="15dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:paddingBottom="@dimen/len_10"
+    android:gravity="center_horizontal"
+    android:background="@drawable/pop_back"
+    android:orientation="vertical"
+    tools:targetApi="lollipop">
+
+    <Button
+        android:id="@+id/btn_closewindow"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/ic_close"
+        android:backgroundTint="@color/addWindowClose" />
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/len_16"
+        android:paddingTop="@dimen/len_10"
+        android:paddingBottom="@dimen/len_10"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.zyf.italker.common.widget.customview.ClearEditText
+            android:id="@+id/addword_english"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/len_10"
+            android:layout_marginRight="@dimen/len_10"
+
+            android:digits="qwertyuioplkjhgfdsazxcvbnm"
+            android:gravity="center"
+            android:hint="输入单词"
+            android:inputType="textPhonetic|textAutoComplete"
+            android:maxLength="20"
+            android:singleLine="true"
+            android:textColor="@color/addWindowEng"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/len_20"
+        android:layout_marginBottom="@dimen/len_16">
+
+        <Button
+            android:id="@+id/btn_addword"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@color/light_blue_200"
+            android:foreground="@drawable/ic_touch_add"
+            android:text="添加"
+            android:textColor="@color/addWindowBtnAdd"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <net.qiujuer.genius.ui.widget.Loading
+            android:id="@+id/loading"
+            android:layout_width="@dimen/len_36"
+            android:layout_height="@dimen/len_36"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:visibility="invisible"
+            app:gAutoRun="false"
+            app:gBackgroundColor="@color/trans"
+            app:gForegroundColor="@color/g_default_primary"
+            app:gForegroundLineSize="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btn_addword" />
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

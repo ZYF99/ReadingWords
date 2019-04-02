@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <color name="addWindowBg">#FFFFFF</color>
+    <color name="addWindowEng">#000000</color>
+    <color name="addWindowClose">#000000</color>
+    <color name="addWindowBtnAdd">#ffffff</color>
+
+    <color name="foreground_click">#6B5EB5FF</color>
+    <color name="foreground_delete">#FF4646</color>
+    <color name="foreground_add">#00BCD4</color>
+
+    <color name="cell_bg">#2196F3</color>
+    <color name="cell_text_eng">#000000</color>
+    <color name="cell_text_chinese">#DF444444</color>
+    <color name="main_floating">#3F51B5</color>
+    <color name="main_nav">#09D2E4</color>
+
+    <color name="functionWindow_text">#2E2E2E</color>
+    <color name="functionWindow_heng">#D5464646</color>
+
+
+</resources>

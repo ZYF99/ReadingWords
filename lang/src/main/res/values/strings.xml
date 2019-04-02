@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_nasme">lang</string>
+    <string name="trans_failed">翻译接收失败！</string>
+    <string name="pleaseInput">翻译君在哦~</string>
+    <string name="transLoading">努力翻译中···</string>
+    <string name="addWords">添加词条</string>
+    <string name="showList">查看词条</string>
+    <string name="pleaseInputWord">请输入单词</string>
+    <string name="AddCannotTrans">抱歉~翻译君没有找到这个单词</string>
+    <string name="noSelected">未选中词条</string>
+</resources>

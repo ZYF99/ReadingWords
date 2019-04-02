@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<com.zyf.italker.common.widget.customview.BubbleLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="@dimen/len_10"
+    android:padding="@dimen/len_16"
+    app:background_color="@color/white"
+    app:direction="bottom"
+    app:offset="@dimen/len_44"
+    app:radius="5dp"
+    app:shadow_color="#999999"
+    app:shadow_size="@dimen/len_4"
+    tools:ignore="UnusedAttribute">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_addword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="@drawable/ic_touch_add"
+            android:gravity="center"
+            android:paddingLeft="@dimen/len_16"
+            android:paddingTop="@dimen/len_16"
+            android:paddingBottom="@dimen/len_8"
+            android:paddingRight="@dimen/len_16"
+            android:text="添加单词"
+            android:textColor="@color/functionWindow_text"
+            android:textSize="@dimen/font_16" />
+
+
+        <TextView
+            android:id="@+id/txt_setcount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="@drawable/ic_touch_add"
+            android:gravity="center"
+            android:paddingLeft="@dimen/len_16"
+            android:paddingTop="@dimen/len_8"
+            android:paddingRight="@dimen/len_16"
+            android:paddingBottom="@dimen/len_16"
+            android:text="重复次数"
+            android:textColor="@color/functionWindow_text"
+            android:textSize="@dimen/font_16" />
+
+
+    </LinearLayout>
+</com.zyf.italker.common.widget.customview.BubbleLayout>
+

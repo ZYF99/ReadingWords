@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <color name="colorPrimary">#09D2E4</color>
+    <color name="colorPrimaryDark">#09E4E4</color>
+    <color name="colorAccent">#fff</color>
+    <color name="colorBack">#fff</color>
+
+    <color name="colorToolBarStart">#00BCD4</color>
+    <color name="colorToolBarEnd">#8EC9D6</color>
+
+
+
+</resources>
