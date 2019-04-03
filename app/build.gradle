@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'com.github.dcendents.android-maven'
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -37,7 +38,8 @@ dependencies {
     //butterknife
     api 'com.jakewharton:butterknife:9.0.0-rc3'
     annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0-rc3'
-
+    //ui
+    implementation 'com.github.ZYF99:UI2:1.0.0'
     implementation project(':common')
     implementation project(':factory')
     implementation project(':lang')
